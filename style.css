@@ -1,0 +1,58 @@
+body {
+    /* background-image: url("40wikisky.jpeg"); */
+    background-image: url("files/space.jpeg");
+    background-repeat: repeat;
+    color: #ff00ff;
+    font-family: "Orbit", sans-serif;
+    text-align: center;
+}
+
+#canvas-container {
+    background-color: rgba(0, 0, 0, 0.);
+    /* Example: Semi-transparent black background */
+    opacity: 0.;
+    /* Example: Adjust the opacity as needed */
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+
+@font-face {
+    font-family: 'Orbit';
+    src: url('Orbit-Regular.ttf') format('truetype');
+}
+
+
+h1 {
+    font-size: 48px;
+    margin: 50px 0;
+    background: linear-gradient(95deg, yellow, pink);
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav a:hover {
+    color: #ff00ff;
+    text-decoration: underline;
+}
