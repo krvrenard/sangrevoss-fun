@@ -1,6 +1,6 @@
 body {
     /* background-image: url("40wikisky.jpeg"); */
-    background-image: url("files/space.jpeg");
+    background-image: url("files/pool.jpeg");
     background-repeat: repeat;
     color: #ff00ff;
     font-family: "Orbit", sans-serif;
@@ -17,12 +17,10 @@ body {
     margin: 0 auto;
 }
 
-
 @font-face {
     font-family: 'Orbit';
     src: url('Orbit-Regular.ttf') format('truetype');
 }
-
 
 h1 {
     font-size: 48px;
@@ -33,8 +31,6 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
 
 nav ul {
     list-style: none;
@@ -47,12 +43,55 @@ nav li {
 }
 
 nav a {
-    color: #00ffff;
+    color: #fffb00;
     text-decoration: none;
     font-size: 24px;
+    position: relative;
+    /* Added position relative for positioning pseudo-elements */
 }
 
 nav a:hover {
-    color: #ff00ff;
+    color: #ff00fb;
     text-decoration: underline;
+}
+
+nav a:hover::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("files/sangre-L.png");
+    background-size: cover;
+    left: -30px;
+    /* Adjust the positioning as per your preference */
+}
+
+nav a:hover::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("files/sangre-R.png");
+    background-size: cover;
+    right: -30px;
+    /* Adjust the positioning as per your preference */
+}
+
+nav .special-link {
+    font-size: 18px;
+    /* Adjust the font size as needed */
+    color: yellow;
+    /* Adjust the color as needed */
+    text-decoration: none;
+    position: relative;
+}
+
+nav .special-link:hover {
+    color: #ff00fb;
+    text-decoration: underline;
+}
+
+nav .special-link:hover::before,
+nav .special-link:hover::after {
+    display: none;
 }
