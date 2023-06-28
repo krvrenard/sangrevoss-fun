@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>Sangre Voss</title>
+    <link rel="icon" type="image/png" href="files/sangre-v-noodles-sans-noodles-thumb-yellow.png">
 </head>
 
 <body>
@@ -23,7 +24,10 @@
         </nav>
     </div>
 
-    <div id="canvas-container"></div>
+    <div id="canvas-container">
+        <img id="rotating-image" src="files/sangre-v-noodles-sans-noodles.png" alt="Rotating image">
+    </div>
+
 
     <nav>
         <ul>
@@ -37,77 +41,6 @@
                     target="_blank">Tour de Trance 🎛️</a></li>
         </ul>
     </nav>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/OBJLoader.js"></script>
-
-    <script>
-        // Get the container element
-        const container = document.getElementById('canvas-container');
-
-        // Create a scene
-        const scene = new THREE.Scene();
-
-        // Create a camera
-        const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
-        camera.position.z = 1.5;
-
-        // Create a renderer
-        const renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
-        renderer.setClearAlpha(0); // Set clear alpha to 0 for a fully transparent background
-        container.appendChild(renderer.domElement);
-
-        // Create a geometry(e.g., a cube)
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-        // Create a variable to store the mouse position
-        const mouse = new THREE.Vector2();
-
-        // Add mouse events for rotation
-        container.addEventListener('mousemove', onMouseMove);
-        container.addEventListener('mousedown', onMouseDown);
-        container.addEventListener('mouseup', onMouseUp);
-
-        // Define mouse event handlers
-        function onMouseMove(event) {
-            event.preventDefault();
-
-            // Calculate normalized device coordinates (NDC)
-            mouse.x = (event.clientX / container.offsetWidth) * 2 - 1;
-            mouse.y = -(event.clientY / container.offsetHeight) * 2 + 1;
-
-            // Update cube rotation based on mouse movement
-            cube.rotation.x = mouse.y * 2;
-            cube.rotation.y = mouse.x * 2;
-        }
-
-        function onMouseDown(event) {
-            event.preventDefault();
-
-            // Add any additional actions when mouse is pressed down
-        }
-
-        function onMouseUp(event) {
-            event.preventDefault();
-
-            // Add any additional actions when mouse is released
-        }
-
-        // Define an animation function
-        function animate() {
-            requestAnimationFrame(animate);
-
-            // Render the scene
-            renderer.render(scene, camera);
-        }
-
-        // Start the animation
-        animate();
-    </script>
 
 
 </body>

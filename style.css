@@ -9,12 +9,32 @@ body {
 
 #canvas-container {
     background-color: rgba(0, 0, 0, 0.);
-    /* Example: Semi-transparent black background */
-    opacity: 0.;
-    /* Example: Adjust the opacity as needed */
-    width: 400px;
-    height: 400px;
+    opacity: 1.;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+#rotating-image {
+    width: 100%;
+    /* Or any other size that suits your design */
+    height: auto;
+    /* Keeps the aspect ratio of the image */
+    animation: rotation 10s infinite linear;
+    /* Adjust the '10s' to change the speed of the rotation */
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 @font-face {
