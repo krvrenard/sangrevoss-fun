@@ -43,8 +43,9 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 70px;
     margin: 50px 0;
+    margin-bottom: 10px;
     background: linear-gradient(95deg, yellow, pink);
     background-size: 20px 20px;
     background-repeat: repeat;
@@ -115,3 +116,42 @@ nav .special-link:hover::before,
 nav .special-link:hover::after {
     display: none;
 }
+
+
+/* Social Links Container */
+#social-links nav ul {
+    list-style: none; /* Removes the bullet points */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+}
+
+/* List Items */
+#social-links nav ul li {
+    display: inline-block; /* Displays list items inline */
+    margin-right: 30px; /* Adds some space between the icons */
+    margin-top: 0px;
+}
+
+/* Last item margin fix */
+#social-links nav ul li:last-child {
+    margin-right: 0; /* Removes margin from the last item */
+}
+
+/* Social Icons */
+.social-icon {
+    display: inline-block;
+    width: 24px; /* Adjust based on your icon size */
+    height: 24px; /* Adjust based on your icon size */
+    background-size: cover;
+    cursor: pointer; /* Changes the cursor on hover over the icons */
+}
+
+
+.instagram-icon { background-image: url('files/instagram.png'); }
+.soundcloud-icon { background-image: url('files/soundcloud.png'); }
+.bandcamp-icon { background-image: url('files/bandcamp.png'); }
+.spotify-icon { background-image: url('files/spotify.png'); }
+.apple-music-icon { background-image: url('files/apple-music.png'); }
